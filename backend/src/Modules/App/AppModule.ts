@@ -10,7 +10,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { typeOrmConfig } from 'config/typeorm.cofig';
+import { typeOrmConfig } from 'src/config/typeorm.config';
 
 @Module({
   imports: [
@@ -25,6 +25,6 @@ import { typeOrmConfig } from 'config/typeorm.cofig';
     TypeOrmModule.forRoot(typeOrmConfig),
   ],
   controllers: [AppController],
-  providers: [AppService, JwtStrategy],
+  providers: [AppService],
 })
 export class AppModule {}

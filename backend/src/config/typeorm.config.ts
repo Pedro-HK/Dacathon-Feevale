@@ -6,7 +6,6 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 
 config();
 
-const isDev = process.env.NODE_ENV === 'development';
 
 export const typeOrmConfig: TypeOrmModuleOptions = {
   type: 'postgres',
@@ -16,27 +15,13 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   entities: [join(__dirname, '..', '**', '*.entity.{ts,js}')],
-  migrations: process.env.DB_SPECIFIC_MIGRATION
-    ? [join(__dirname, '..', 'database', 'migrations', process.env.DB_SPECIFIC_MIGRATION)]
-    : [join(__dirname, '..', 'database', 'migrations', '*.{ts,js}')],
-  synchronize: isDev,
   autoLoadEntities: true,
-  ...(process.env.NODE_ENV !== 'development' && {
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  }),
+  synchronize: true
 };
 
 const configService = new ConfigService();
 
-const dataSourceEntities = isDev
-  ? [join(__dirname, '..', '**', '*.entity.ts')]
-  : [join(__dirname, '..', '**', '*.entity.js')];
-
-const dataSourceMigrations = isDev
-  ? [join(__dirname, '..', 'database', 'migrations', '*.ts')]
-  : [join(__dirname, '..', 'database', 'migrations', '*.js')];
+const dataSourceEntities =[join(__dirname, '..', '**', '*.entity.ts')]
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
@@ -46,18 +31,9 @@ export const dataSourceOptions: DataSourceOptions = {
   password: configService.get<string>('DB_PASSWORD'),
   database: configService.get<string>('DB_DATABASE'),
   entities: dataSourceEntities,
-  migrations: process.env.DB_SPECIFIC_MIGRATION
-    ? [join(__dirname, '..', 'database', 'migrations', process.env.DB_SPECIFIC_MIGRATION)]
-    : dataSourceMigrations,
   migrationsTableName: 'migrations',
   migrationsRun: false,
-  synchronize: isDev,
-  logging: isDev,
-  ...(process.env.NODE_ENV !== 'development' && {
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  }),
+  synchronize: true
 };
 
 const AppDataSource = new DataSource(dataSourceOptions);
