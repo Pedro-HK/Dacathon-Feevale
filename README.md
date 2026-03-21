@@ -225,24 +225,24 @@ O progresso do usuário (disciplinas cursadas) funciona em duas camadas:
 
 | Requisito | Descrição | Status |
 |---|---|---|
-| RF01 | Login com matrícula e senha | ✅ |
-| RF02 | Cadastro com nome, matrícula, e-mail e curso | ✅ |
-| RF03 | Alternar entre currículos disponíveis | ✅ |
-| RF04 | Curso do usuário como visualização padrão | ✅ |
-| RF05 | Visualização por trilhas | ✅ |
-| RF06 | Indicação visual de pré-requisitos e correquisitos | ✅ |
-| RF07 | Organização por semestre e trilha | ✅ |
-| RF08 | Destaque do caminho crítico | ✅ |
-| RF09 | Marcar disciplinas como cursadas com persistência | ✅ |
-| RF10 | Cálculo automático de disciplinas disponíveis | ✅ |
-| RF11 | Percentual de conclusão do curso | ✅ |
-| RF12 | Estimativa de semestres para conclusão | ✅ |
-| RNF01 | Proteção contra acesso não autorizado | ✅ |
-| RNF02 | Criptografia de credenciais (bcrypt + JWT) | ✅ |
-| RNF03 | Tempo de resposta adequado | ✅ |
-| RNF04 | Código modular e bem documentado | ✅ |
-| RNF05 | Tratamento de erros | ✅ |
-| RNF06 | Interface intuitiva com feedback visual | ✅ |
+| RF01 | Login com matrícula e senha |  |
+| RF02 | Cadastro com nome, matrícula, e-mail e curso |  |
+| RF03 | Alternar entre currículos disponíveis |  |
+| RF04 | Curso do usuário como visualização padrão |  |
+| RF05 | Visualização por trilhas |  |
+| RF06 | Indicação visual de pré-requisitos e correquisitos |  |
+| RF07 | Organização por semestre e trilha |  |
+| RF08 | Destaque do caminho crítico |  |
+| RF09 | Marcar disciplinas como cursadas com persistência |  |
+| RF10 | Cálculo automático de disciplinas disponíveis |  |
+| RF11 | Percentual de conclusão do curso |  |
+| RF12 | Estimativa de semestres para conclusão |  |
+| RNF01 | Proteção contra acesso não autorizado |  |
+| RNF02 | Criptografia de credenciais (bcrypt + JWT) |  |
+| RNF03 | Tempo de resposta adequado |  |
+| RNF04 | Código modular e bem documentado |  |
+| RNF05 | Tratamento de erros |  |
+| RNF06 | Interface intuitiva com feedback visual |  |
 
 ---
 
