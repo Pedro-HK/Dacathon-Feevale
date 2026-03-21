@@ -1,21 +1,14 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
+import { InjectRepository } from '@nestjs/typeorm';
+import { User } from './User.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class UserService {
-  constructor(private prisma: PrismaService) {}
+  constructor(@InjectRepository(User)
+  private readonly usersRepository: Repository<User>) { }
 
-  getMe(userId: number) {
-    return this.prisma.usuario.findUnique({ where: { id: userId } });
-  }
-
-  selectCourse(userId: number, course: string) {
-    return this.prisma.matricula.create({
-      data: {
-        alunoId: userId,
-        cursoId: parseInt(course),
-        status: 'matriculado',
-      },
-    });
+  list(): Promise<number> {
+    return this.usersRepository.count()
   }
 }

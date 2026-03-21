@@ -13,7 +13,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(payload: { sub: string }) {
-    const user = await this.userService.getMe(parseInt(payload.sub));
-    return user;
+    // const user = await this.userService.getMe(parseInt(payload.sub));
+    // return user;
   }
 }
