@@ -1,22 +1,19 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Body, Controller, Get, Patch, Post, Put, Query } from '@nestjs/common';
 import { DisciplineService } from './discipline.service';
+import { Discipline } from './discipline.entity';
 
 @Controller('disciplines')
 export class DisciplineController {
   constructor(private disciplineService: DisciplineService) {}
 
-  @Get('available')
-  async getAvailable(
-    @Query('course') course: 'cc' | 'si' = 'cc',
-    @Query('completed') completed: string = '',
-  ) {
-    const completedIds = completed ? completed.split(',').filter(Boolean) : [];
-    return this.disciplineService.getAvailable(course, completedIds);
+  @Post('')
+  async createDiscipline(@Body() data: Partial<Discipline>): Promise<Discipline> {
+    return this.disciplineService.create(data)
   }
 
-  @Get('critical-path')
-  async getCriticalPath(@Query('course') course: 'cc' | 'si' = 'cc') {
-    return this.disciplineService.getCriticalPath(course);
+  @Patch('')
+  async addRequisite(@Body() data: {requisite: number, codigoDisciplina: number}): Promise<void> {
+    return this.disciplineService.addRequisite(data)
   }
 
   @Get()

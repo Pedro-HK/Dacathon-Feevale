@@ -14,15 +14,22 @@ export class Discipline {
   @Column({ unique: true })
   name: string;
 
+  @Column({ unique: true })
+  codigo: number;
+
+  @Column()
+  module: string;
+
+  @Column()
+  creditos: number;
+
   @Column('int')
   semester: number;
 
   @Column({ type: 'enum', enum: ['cc', 'si'], default: 'cc' })
   course: 'cc' | 'si';
 
-  @ManyToMany(() => Discipline, (discipline) => discipline.prerequisites, {
-    cascade: true,
-  })
+  @ManyToMany(() => Discipline, (discipline) => discipline.prerequisites)
   @JoinTable({
     name: 'discipline_prerequisites',
     joinColumn: { name: 'discipline_id', referencedColumnName: 'id' },
@@ -30,9 +37,7 @@ export class Discipline {
   })
   prerequisites: Discipline[];
 
-  @ManyToMany(() => Discipline, (discipline) => discipline.corequisites, {
-    cascade: true,
-  })
+  @ManyToMany(() => Discipline, (discipline) => discipline.corequisites)
   @JoinTable({
     name: 'discipline_corequisites',
     joinColumn: { name: 'discipline_id', referencedColumnName: 'id' },
