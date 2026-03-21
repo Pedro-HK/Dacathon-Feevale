@@ -1,14 +1,16 @@
-services: 
-  postgres: 
-    image: postgres:15
+services:
+  db:
+    image: postgres
     restart: always
-    environment: 
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=prisma
-    ports: 
-      - "5432:5432"
-    volumes: 
-      - postgres_data:/var/lib/postgresql/data
-volumes: 
-  postgres_data: 
+    env_file: .env
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - '${DB_PORT}:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql
+
+volumes:
+  postgres-data:
