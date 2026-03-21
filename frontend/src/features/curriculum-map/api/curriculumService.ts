@@ -1,27 +1,31 @@
 import type { Curriculum, Course } from '@/entities/curriculum'
 import { fromRawList, type RawSubject } from '@/entities/subject'
-import siData from '@/shared/data/sistemas-de-informação.json'
+import siData from '@/shared/data/si.json'
+import ccData from '@/shared/data/cc.json'
 
-// Quando o backend estiver pronto, apaga esse mock
-// e descomenta a versão com httpClient abaixo
 const MOCK_DATA: Record<string, RawSubject[]> = {
   SI: siData as RawSubject[],
-  CC: siData as RawSubject[], // trocar pelo JSON de CC quando tiver
+  CC: ccData as RawSubject[],
+}
+
+const COURSE_NAMES: Record<string, string> = {
+  SI: 'Sistemas de Informação',
+  CC: 'Ciência da Computação',
 }
 
 export const curriculumService = {
+  listCourses: async (): Promise<{ id: Course; name: string }[]> => {
+    await new Promise((r) => setTimeout(r, 100))
+    return Object.keys(MOCK_DATA).map((id) => ({ id: id as Course, name: COURSE_NAMES[id] ?? id }))
+  },
+
   getCurriculum: async (course: Course): Promise<Curriculum> => {
-    // --- versão mock (JSON local) ---
-    await new Promise((r) => setTimeout(r, 150)) // simula latência
+    await new Promise((r) => setTimeout(r, 150))
     return {
       id:       course,
-      name:     course === 'SI' ? 'Sistemas de Informação' : 'Ciência da Computação',
+      name:     COURSE_NAMES[course] ?? course,
       course,
-      subjects: fromRawList(MOCK_DATA[course]),
+      subjects: fromRawList(MOCK_DATA[course] ?? []),
     }
-
-    // --- versão real (descomentar quando backend estiver pronto) ---
-    // const { data } = await httpClient.get<RawSubject[]>(`/curricula/${course}`)
-    // return { id: course, name: ..., course, subjects: fromRawList(data) }
   },
 }

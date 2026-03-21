@@ -9,6 +9,8 @@ interface CurriculumStore {
   setCurriculum: (c: Curriculum) => void
   setActiveCourse: (course: Course) => void
   setSelectedSubject: (s: Subject | null) => void
+  availableCourses: { id: Course; name: string }[]
+  setAvailableCourses: (courses: { id: Course; name: string }[]) => void
 }
 
 export const useCurriculumStore = create<CurriculumStore>((set) => ({
@@ -18,4 +20,6 @@ export const useCurriculumStore = create<CurriculumStore>((set) => ({
   setCurriculum: (curriculum) => set({ curriculum }),
   setActiveCourse: (activeCourse) => set({ activeCourse }),
   setSelectedSubject: (selectedSubject) => set({ selectedSubject }),
+  availableCourses: [],
+  setAvailableCourses: (availableCourses) => set({ availableCourses }),
 }))

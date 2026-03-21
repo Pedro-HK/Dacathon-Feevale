@@ -8,7 +8,7 @@ import { useUserStore } from '@/entities/user'
 import { curriculumService } from '@/features/curriculum-map/api/curriculumService'
 
 export default function CurriculumMapPage() {
-  const { setCurriculum } = useCurriculumStore()
+  const { setCurriculum, setAvailableCourses, availableCourses } = useCurriculumStore()
   const currentUser = useUserStore((s) => s.currentUser)
 
   const {
@@ -21,9 +21,17 @@ export default function CurriculumMapPage() {
     setActiveCourse,
   } = useCurriculumMap()
 
-  useEffect(() => {
-    curriculumService.getCurriculum(activeCourse).then(setCurriculum)
-  }, [activeCourse])
+useEffect(() => {
+  curriculumService.listCourses().then((courses) => {
+    setAvailableCourses(courses)
+    // RF04 — usa o curso do usuário como padrão
+    if (currentUser && courses.find((c) => c.id === currentUser.course)) {
+      setActiveCourse(currentUser.course)
+    }
+  })
+}, [currentUser])
+
+  
 
   return (
     <div className="flex flex-col h-screen bg-gray-50">

@@ -1,0 +1,434 @@
+[
+  {
+    "codigo": 383480,
+    "semestre": 1,
+    "periodo": "desenvolvedor",
+    "nome": "ALGORITMOS",
+    "creditos": 100,
+    "requisitos": [],
+    "correquisitos": [383490]
+  },
+  {
+    "codigo": 383490,
+    "semestre": 1,
+    "periodo": "desenvolvedor",
+    "nome": "ARQUITETURA DE COMPUTADORES",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383480]
+  },
+  {
+    "codigo": 382300,
+    "semestre": 1,
+    "periodo": "analista",
+    "nome": "EMPREENDEDORISMO E NOVOS NEGÓCIOS",
+    "creditos": 60,
+    "requisitos": [],
+    "correquisitos": [383510]
+  },
+  {
+    "codigo": 383510,
+    "semestre": 1,
+    "periodo": "analista",
+    "nome": "CENÁRIOS DO BRASIL CONTEMPORÂNEO",
+    "creditos": 120,
+    "requisitos": [],
+    "correquisitos": [382300]
+  },
+  {
+    "codigo": 383850,
+    "semestre": 1,
+    "periodo": "cientista",
+    "nome": "CÁLCULO",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383860]
+  },
+  {
+    "codigo": 383860,
+    "semestre": 1,
+    "periodo": "cientista",
+    "nome": "TÓPICOS AVANÇADOS EM COMPUTAÇÃO I",
+    "creditos": 40,
+    "requisitos": [],
+    "correquisitos": [383850]
+  },
+  {
+    "codigo": 383520,
+    "semestre": 2,
+    "periodo": "desenvolvedor",
+    "nome": "PROGRAMAÇÃO I",
+    "creditos": 80,
+    "requisitos": [383480],
+    "correquisitos": [383530]
+  },
+  {
+    "codigo": 383530,
+    "semestre": 2,
+    "periodo": "desenvolvedor",
+    "nome": "ESTRUTURA DE DADOS I",
+    "creditos": 80,
+    "requisitos": [383480],
+    "correquisitos": [383520]
+  },
+  {
+    "codigo": 383540,
+    "semestre": 2,
+    "periodo": "analista",
+    "nome": "SISTEMAS OPERACIONAIS",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383530, 383550]
+  },
+  {
+    "codigo": 383550,
+    "semestre": 2,
+    "periodo": "analista",
+    "nome": "REDES DE COMPUTADORES",
+    "creditos": 80,
+    "requisitos": [383480, 383490],
+    "correquisitos": [383540]
+  },
+  {
+    "codigo": 383560,
+    "semestre": 2,
+    "periodo": "cientista",
+    "nome": "PROJETO - TI E SOCIEDADE",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383570]
+  },
+  {
+    "codigo": 383570,
+    "semestre": 2,
+    "periodo": "cientista",
+    "nome": "TEORIA DA COMPUTAÇÃO",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383560]
+  },
+  {
+    "codigo": 383580,
+    "semestre": 3,
+    "periodo": "desenvolvedor",
+    "nome": "BANCO DE DADOS I",
+    "creditos": 80,
+    "requisitos": [383480],
+    "correquisitos": [383590]
+  },
+  {
+    "codigo": 383590,
+    "semestre": 3,
+    "periodo": "desenvolvedor",
+    "nome": "PROGRAMAÇÃO II",
+    "creditos": 80,
+    "requisitos": [383520],
+    "correquisitos": [383580]
+  },
+  {
+    "codigo": 383600,
+    "semestre": 3,
+    "periodo": "analista",
+    "nome": "ANÁLISE DE SISTEMAS",
+    "creditos": 80,
+    "requisitos": [383520],
+    "correquisitos": [383580, 383610]
+  },
+  {
+    "codigo": 383610,
+    "semestre": 3,
+    "periodo": "analista",
+    "nome": "INTERFACE HOMEM-MÁQUINA",
+    "creditos": 80,
+    "requisitos": [383520],
+    "correquisitos": [383600]
+  },
+  {
+    "codigo": 383880,
+    "semestre": 3,
+    "periodo": "cientista",
+    "nome": "LINGUAGENS FORMAIS E AUTÔMATOS",
+    "creditos": 80,
+    "requisitos": [383530, 383570],
+    "correquisitos": [383890]
+  },
+  {
+    "codigo": 383890,
+    "semestre": 3,
+    "periodo": "cientista",
+    "nome": "ESTRUTURAS DE DADOS II",
+    "creditos": 80,
+    "requisitos": [383520, 383530],
+    "correquisitos": [383880]
+  },
+  {
+    "codigo": 383630,
+    "semestre": 4,
+    "periodo": "desenvolvedor",
+    "nome": "BANCO DE DADOS II",
+    "creditos": 80,
+    "requisitos": [383520, 383580],
+    "correquisitos": [383640]
+  },
+  {
+    "codigo": 383640,
+    "semestre": 4,
+    "periodo": "desenvolvedor",
+    "nome": "PROJETO - DESAFIO COMPUTACIONAL",
+    "creditos": 80,
+    "requisitos": [383560, 383590, 383600],
+    "correquisitos": [383630]
+  },
+  {
+    "codigo": 383650,
+    "semestre": 4,
+    "periodo": "analista",
+    "nome": "GERÊNCIA DE PROJETOS",
+    "creditos": 80,
+    "requisitos": [383480],
+    "correquisitos": [383660]
+  },
+  {
+    "codigo": 383660,
+    "semestre": 4,
+    "periodo": "analista",
+    "nome": "ENGENHARIA DE SOFTWARE I",
+    "creditos": 80,
+    "requisitos": [383600],
+    "correquisitos": [383650]
+  },
+  {
+    "codigo": 383900,
+    "semestre": 4,
+    "periodo": "cientista",
+    "nome": "COMPLEXIDADE DE ALGORITMOS",
+    "creditos": 80,
+    "requisitos": [383590, 383890],
+    "correquisitos": [383910]
+  },
+  {
+    "codigo": 383910,
+    "semestre": 4,
+    "periodo": "cientista",
+    "nome": "PROCESSAMENTO DIGITAL DE IMAGENS",
+    "creditos": 80,
+    "requisitos": [383590],
+    "correquisitos": [383900]
+  },
+  {
+    "codigo": 383920,
+    "semestre": 5,
+    "periodo": "desenvolvedor",
+    "nome": "PROCESSAMENTO PARALELO",
+    "creditos": 80,
+    "requisitos": [383490, 383540],
+    "correquisitos": [383930]
+  },
+  {
+    "codigo": 383930,
+    "semestre": 5,
+    "periodo": "desenvolvedor",
+    "nome": "TÓPICOS AVANÇADOS EM COMPUTAÇÃO II",
+    "creditos": 40,
+    "requisitos": [],
+    "correquisitos": [383920]
+  },
+  {
+    "codigo": 383710,
+    "semestre": 5,
+    "periodo": "analista",
+    "nome": "ENGENHARIA DE SOFTWARE II",
+    "creditos": 80,
+    "requisitos": [383650, 383660],
+    "correquisitos": [383720]
+  },
+  {
+    "codigo": 383720,
+    "semestre": 5,
+    "periodo": "analista",
+    "nome": "MATEMÁTICA DISCRETA",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383710]
+  },
+  {
+    "codigo": 383940,
+    "semestre": 5,
+    "periodo": "cientista",
+    "nome": "COMPUTAÇÃO GRÁFICA",
+    "creditos": 80,
+    "requisitos": [383910],
+    "correquisitos": [384140]
+  },
+  {
+    "codigo": 384140,
+    "semestre": 5,
+    "periodo": "cientista",
+    "nome": "PROJETO - COMPILADORES",
+    "creditos": 80,
+    "requisitos": [383640, 383880],
+    "correquisitos": [383940]
+  },
+  {
+    "codigo": 383740,
+    "semestre": 6,
+    "periodo": "desenvolvedor",
+    "nome": "PROBABILIDADE E ESTATÍSTICA",
+    "creditos": 80,
+    "requisitos": [383720],
+    "correquisitos": [383750]
+  },
+  {
+    "codigo": 383750,
+    "semestre": 6,
+    "periodo": "desenvolvedor",
+    "nome": "ÉTICA E COMPORTAMENTO HUMANO",
+    "creditos": 120,
+    "requisitos": [383560],
+    "correquisitos": [383740]
+  },
+  {
+    "codigo": 383760,
+    "semestre": 6,
+    "periodo": "analista",
+    "nome": "LÓGICA",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383770]
+  },
+  {
+    "codigo": 383770,
+    "semestre": 6,
+    "periodo": "analista",
+    "nome": "PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO",
+    "creditos": 80,
+    "requisitos": [383520],
+    "correquisitos": [383760]
+  },
+  {
+    "codigo": 383950,
+    "semestre": 6,
+    "periodo": "cientista",
+    "nome": "ÁLGEBRA MATRICIAL E COMPUTACIONAL",
+    "creditos": 80,
+    "requisitos": [383720],
+    "correquisitos": [384150]
+  },
+  {
+    "codigo": 384150,
+    "semestre": 6,
+    "periodo": "cientista",
+    "nome": "PROJETO - CIÊNCIA E TECNOLOGIA",
+    "creditos": 100,
+    "requisitos": [384140],
+    "correquisitos": [383950]
+  },
+  {
+    "codigo": 383780,
+    "semestre": 7,
+    "periodo": "desenvolvedor",
+    "nome": "PROJETO - INOVAÇÕES TECNOLÓGICAS",
+    "creditos": 80,
+    "requisitos": [382300, 384150],
+    "correquisitos": [383790]
+  },
+  {
+    "codigo": 383790,
+    "semestre": 7,
+    "periodo": "desenvolvedor",
+    "nome": "SISTEMAS DISTRIBUÍDOS",
+    "creditos": 80,
+    "requisitos": [383540, 383550],
+    "correquisitos": [383780]
+  },
+  {
+    "codigo": 383800,
+    "semestre": 7,
+    "periodo": "analista",
+    "nome": "INTELIGÊNCIA ARTIFICIAL E COMPUTACIONAL",
+    "creditos": 80,
+    "requisitos": [383770],
+    "correquisitos": []
+  },
+  {
+    "codigo": 384180,
+    "semestre": 7,
+    "periodo": "analista",
+    "nome": "OPTATIVA",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": []
+  },
+  {
+    "codigo": 383960,
+    "semestre": 7,
+    "periodo": "cientista",
+    "nome": "TÓPICOS AVANÇADOS EM COMPUTAÇÃO III",
+    "creditos": 40,
+    "requisitos": [],
+    "correquisitos": [383970]
+  },
+  {
+    "codigo": 383970,
+    "semestre": 7,
+    "periodo": "cientista",
+    "nome": "PESQUISA OPERACIONAL",
+    "creditos": 80,
+    "requisitos": [383590, 383740],
+    "correquisitos": [383960]
+  },
+  {
+    "codigo": 383810,
+    "semestre": 8,
+    "periodo": "desenvolvedor",
+    "nome": "AVALIAÇÃO DE DESEMPENHO DE SISTEMAS",
+    "creditos": 80,
+    "requisitos": [383530, 383590, 383740],
+    "correquisitos": [383980]
+  },
+  {
+    "codigo": 383980,
+    "semestre": 8,
+    "periodo": "desenvolvedor",
+    "nome": "TRABALHO DE CONCLUSÃO DE CURSO",
+    "creditos": 80,
+    "requisitos": [383780],
+    "correquisitos": [383810]
+  },
+  {
+    "codigo": 383830,
+    "semestre": 8,
+    "periodo": "analista",
+    "nome": "SEGURANÇA E AUDITORIA DE SISTEMAS",
+    "creditos": 80,
+    "requisitos": [383550, 383660],
+    "correquisitos": [383840]
+  },
+  {
+    "codigo": 383840,
+    "semestre": 8,
+    "periodo": "analista",
+    "nome": "AUTOMAÇÃO",
+    "creditos": 80,
+    "requisitos": [],
+    "correquisitos": [383830]
+  },
+  {
+    "codigo": 383990,
+    "semestre": 8,
+    "periodo": "cientista",
+    "nome": "TÓPICOS AVANÇADOS EM COMPUTAÇÃO IV",
+    "creditos": 40,
+    "requisitos": [383590],
+    "correquisitos": [384000]
+  },
+  {
+    "codigo": 384000,
+    "semestre": 8,
+    "periodo": "cientista",
+    "nome": "TÓPICOS AVANÇADOS EM COMPUTAÇÃO V",
+    "creditos": 40,
+    "requisitos": [383590],
+    "correquisitos": [383990]
+  }
+]
