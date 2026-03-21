@@ -20,7 +20,7 @@ export class Discipline {
   @Column({ type: 'enum', enum: ['cc', 'si'], default: 'cc' })
   course: 'cc' | 'si';
 
-  @ManyToMany(() => Discipline, (discipline) => discipline.dependents, {
+  @ManyToMany(() => Discipline, (discipline) => discipline.prerequisites, {
     cascade: true,
   })
   @JoinTable({
@@ -29,9 +29,6 @@ export class Discipline {
     inverseJoinColumn: { name: 'prerequisite_id', referencedColumnName: 'id' },
   })
   prerequisites: Discipline[];
-
-  @ManyToMany(() => Discipline, (discipline) => discipline.prerequisites)
-  dependents: Discipline[];
 
   @ManyToMany(() => Discipline, (discipline) => discipline.corequisites, {
     cascade: true,

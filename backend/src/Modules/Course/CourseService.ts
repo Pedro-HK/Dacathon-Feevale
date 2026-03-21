@@ -15,7 +15,7 @@ export interface Course {
 
 @Injectable()
 export class CourseService {
-  private courses: Course[] = courses;
+  private courses: Course[] = [];
 
   getAll(): Course[] {
     return this.courses;

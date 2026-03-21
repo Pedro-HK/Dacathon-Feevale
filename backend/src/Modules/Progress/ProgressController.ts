@@ -1,8 +1,8 @@
 import { Controller, Get, Post, Body, UseGuards } from '@nestjs/common';
-import { JwtAuthGuard } from '../Guards/jwt-auth.guard';
-import { CurrentUser } from '../Guards/current-user.decorator';
+import { JwtAuthGuard } from '../guards/jwt-auth.guard';
+import { CurrentUser } from '../guards/current-user.decorator';
 import { ProgressService } from './ProgressService';
-import { User } from '../User/User.entity';
+import { User } from '../user/User.entity';
 
 interface MarkCompletedDto {
   subjectId: string;

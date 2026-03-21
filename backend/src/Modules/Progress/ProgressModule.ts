@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ProgressController } from './ProgressController';
 import { ProgressService } from './ProgressService';
-import { CurriculumModule } from '../Curriculum/CurriculumModule';
-import { UserModule } from '../User/UserModule';
+import { CurriculumModule } from '../curriculum/CurriculumModule';
+import { UserModule } from '../user/UserModule';
+import { ProgressController } from './progress.controller';
 
 @Module({
   imports: [CurriculumModule, UserModule],

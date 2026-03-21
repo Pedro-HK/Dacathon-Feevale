@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Discipline } from './discipline.entity';
-import { DagNode, getAvailableDisciplines, getCriticalPath, topologicalSort } from '../graph/dag';
+import { DagNode, getAvailableDisciplines, getCriticalPath } from '../graph/dag';
 
 @Injectable()
 export class DisciplineService {

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import courses from '../../data/courses.json';
+import cursos from '../../data/courses.json';
 
 export interface Subject {
   id: string;
@@ -15,7 +15,7 @@ export interface Course {
 
 @Injectable()
 export class CurriculumService {
-  private courses: Course[] = courses;
+  private courses: Course[] = [];
 
   getAll(): Course[] {
     return this.courses;

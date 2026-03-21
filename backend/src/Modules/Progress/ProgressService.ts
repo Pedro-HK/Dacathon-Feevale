@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CurriculumService } from '../Curriculum/CurriculumService';
-import { UserService } from '../User/UserService';
+import { CurriculumService } from '../curriculum/CurriculumService';
+import { UserService } from '../user/UserService';
 
 @Injectable()
 export class ProgressService {

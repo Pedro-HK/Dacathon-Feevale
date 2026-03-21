@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { UserService } from '../User/UserService';
+import { UserService } from '../user/UserService';
 import { DisciplineService } from '../discipline/discipline.service';
 import { getProgressPercentage } from '../graph/dag';
 
