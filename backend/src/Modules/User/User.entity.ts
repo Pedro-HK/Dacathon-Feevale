@@ -10,8 +10,17 @@ export class User {
     id: string;
 
     @Column()
+    name: string;
+
+    @Column({ unique: true })
+    enrollment: string;
+
+    @Column({ unique: true })
     email: string;
 
     @Column()
-    name: string;
+    course: string;
+
+    @Column()
+    password: string;
 }

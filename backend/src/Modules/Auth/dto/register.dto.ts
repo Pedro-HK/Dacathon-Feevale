@@ -1,6 +1,7 @@
 export class RegisterDto {
+  name: string;
+  enrollment: string;
   email: string;
-  senha: string;
-  nome: string;
-  curso: string;
+  password: string;
+  course: string;
 }

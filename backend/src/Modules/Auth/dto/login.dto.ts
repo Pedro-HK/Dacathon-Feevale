@@ -1,6 +1,6 @@
 export class LoginDto {
-  email: string;
-  senha: string;
+  enrollment: string;
+  password: string;
 }
 
 
