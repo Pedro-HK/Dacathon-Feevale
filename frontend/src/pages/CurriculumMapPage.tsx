@@ -21,15 +21,21 @@ export default function CurriculumMapPage() {
     setActiveCourse,
   } = useCurriculumMap()
 
+// 1. carrega lista de cursos
 useEffect(() => {
   curriculumService.listCourses().then((courses) => {
     setAvailableCourses(courses)
-    // RF04 — usa o curso do usuário como padrão
     if (currentUser && courses.find((c) => c.id === currentUser.course)) {
       setActiveCourse(currentUser.course)
     }
   })
 }, [currentUser])
+
+// 2. carrega currículo quando curso muda
+useEffect(() => {
+  if (!activeCourse) return
+  curriculumService.getCurriculum(activeCourse).then(setCurriculum)
+}, [activeCourse])
 
   
 

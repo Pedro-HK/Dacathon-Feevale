@@ -11,7 +11,7 @@ export function RegisterPage() {
     email: string, password: string, course: string
   ) => {
     await register(name, enrollment, email, password, course)
-    navigate('/map')
+    navigate('/mapa-disciplinas')
   }
 
   return (
