@@ -1,0 +1,12 @@
+[
+  {
+    "id": "cc",
+    "name": "Ciência da Computação",
+    "subjects": [
+      { "id": "alg1", "name": "Algoritmos I", "prerequisites": [] },
+      { "id": "alg2", "name": "Algoritmos II", "prerequisites": ["alg1"] },
+      { "id": "ed", "name": "Estruturas de Dados", "prerequisites": ["alg2"] },
+      { "id": "bd", "name": "Banco de Dados", "prerequisites": ["alg1"] }
+    ]
+  }
+]
