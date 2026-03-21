@@ -1,10 +1,10 @@
 import type { Subject } from '@/entities/subject'
 
-// criticalPath.ts — versão corrigida
 export function computeCriticalPath(subjects: Subject[]): string[] {
   const subjectMap = new Map(subjects.map((s) => [s.id, s]))
   const depths = new Map<string, number>()
 
+  // calcula a profundidade de cada nó recursivamente
   function getDepth(id: string): number {
     if (depths.has(id)) return depths.get(id)!
     const subject = subjectMap.get(id)
@@ -19,19 +19,23 @@ export function computeCriticalPath(subjects: Subject[]): string[] {
 
   subjects.forEach((s) => getDepth(s.id))
 
-  // encontra o nó mais profundo
+  // encontra o nó de maior profundidade
   const maxDepth = Math.max(...depths.values())
-  const deepestId = subjects.find((s) => depths.get(s.id) === maxDepth)?.id
-  if (!deepestId) return []
+  const deepestNode = subjects.find((s) => depths.get(s.id) === maxDepth)
+  if (!deepestNode) return []
 
-  // sobe a cadeia de volta até a raiz
+  // sobe a cadeia do nó mais profundo até a raiz
   function getChain(id: string): string[] {
     const subject = subjectMap.get(id)
     if (!subject || subject.prerequisites.length === 0) return [id]
-    const deepestPrereq = subject.prerequisites
-      .sort((a, b) => (depths.get(b) ?? 0) - (depths.get(a) ?? 0))[0]
+
+    // entre os pré-requisitos, segue o de maior profundidade
+    const deepestPrereq = subject.prerequisites.reduce((a, b) =>
+      (depths.get(a) ?? 0) >= (depths.get(b) ?? 0) ? a : b
+    )
+
     return [...getChain(deepestPrereq), id]
   }
 
-  return getChain(deepestId)
+  return getChain(deepestNode.id)
 }

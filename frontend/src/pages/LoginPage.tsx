@@ -8,7 +8,7 @@ export function LoginPage() {
 
   const handleLogin = async (enrollment: string, password: string) => {
     await login(enrollment, password)
-    navigate('/mapa-disciplinas')
+    navigate('/dashboard')
   }
 
   return (
