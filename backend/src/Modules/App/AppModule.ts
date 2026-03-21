@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './AppController';
 import { AppService } from './AppService';
-import { AuthModule } from '../Auth/AuthModule';
 import { UserModule } from '../User/UserModule';
-import { CourseModule } from '../Course/CourseModule';
-import { CurriculumModule } from '../Curriculum/CurriculumModule';
-import { ProgressModule } from '../Progress/ProgressModule';
+import { DisciplineModule } from '../../modules/discipline/discipline.module';
+import { CourseModule } from '../../modules/course/course.module';
+import { ProgressModule } from '../../modules/progress/progress.module';
 import { JwtStrategy } from '../Guards/jwt.strategy';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
@@ -17,9 +16,9 @@ import { typeOrmConfig } from 'config/typeorm.cofig';
   imports: [
     // AuthModule,
     UserModule,
-    // CourseModule,
-    // CurriculumModule,
-    // ProgressModule,
+    DisciplineModule,
+    CourseModule,
+    ProgressModule,
     // PassportModule,
     // JwtModule.register({ secret: 'secret' }),
     ConfigModule.forRoot({ isGlobal: true }), 
