@@ -21,6 +21,9 @@ export class User {
     @Column()
     course: string;
 
+    @Column('text', { array: true, default: () => 'ARRAY[]::text[]' })
+    completedIds: string[];
+
     @Column()
     password: string;
 }
