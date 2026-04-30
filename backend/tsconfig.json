@@ -1,6 +1,8 @@
-{
+{ 
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
     "module": "nodenext",
+    "types": ["jest", "node"],
     "moduleResolution": "nodenext",
     "resolvePackageJsonExports": true,
     "esModuleInterop": true,
@@ -12,8 +14,14 @@
     "allowSyntheticDefaultImports": true,
     "target": "ES2023",
     "sourceMap": true,
+    "rootDir": "./src",
     "outDir": "./dist",
     "baseUrl": "./",
+    "paths": {
+      "@modules/*": ["src/Modules/*"],
+      "@guards/*": ["src/Guards/*"],
+      "@src/*": ["src/*"]
+    },
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -21,5 +29,7 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+
+  "include": ["src/**/*"]
 }
